@@ -1,9 +1,12 @@
 import React, { useEffect, useRef } from "react";
-import { componentStyles } from "../styles/Components";
 import { Product } from "../types";
 import { ProductButton } from "./ProductButton";
 
 export const ProductList = (props: { products: Product[] }) => {
+  // on mobile set scroll to the very bottom cause
+  // my stupid design decision 🤓
+  // (i put stuff at bottom of screen cause its in thumb reach range)
+  // (very human and ergonomic design!)
   const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (containerRef.current) {
@@ -11,14 +14,15 @@ export const ProductList = (props: { products: Product[] }) => {
     }
   }, [props.products]);
   return (
-    // this should be list i guess
-    <div className={componentStyles.productList} ref={containerRef}>
-      {props.products
-        .slice()
-        .reverse()
-        .map((product) => {
-          return <ProductButton key={product.id} product={product} />;
-        })}
-    </div>
+    <ul
+      className={
+        "h-full w-full flex flex-1 flex-col-reverse md:flex-col " +
+        "overflow-scroll scrollbar-hide"
+      }
+    >
+      {props.products.map((product) => {
+        return <ProductButton key={product.id} product={product} />;
+      })}
+    </ul>
   );
 };

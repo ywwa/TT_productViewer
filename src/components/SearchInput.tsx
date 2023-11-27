@@ -1,5 +1,4 @@
 import React from "react";
-import { componentStyles } from "../styles/Components";
 
 export const SearchInput = (props: {
   searchQuery: any;
@@ -16,7 +15,10 @@ export const SearchInput = (props: {
   };
   return (
     <input
-      className={componentStyles.searchInput}
+      className={
+        "w-full p-4 bg-neutral-900 " + 
+        "border-t-2 md:border-2 border-neutral-700 md:rounded-xl"
+      }
       type="text"
       placeholder="Search products by category..."
       value={props.searchQuery}

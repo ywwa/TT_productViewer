@@ -2,4 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+/* chrome fix 
+ * never seen that firefox work better than chrome
+ */
 
+@layer base {
+  html,
+  body,
+  #root {
+    height: -webkit-fill-available;
+  }
+}
+
+/* ios fix */
+@supports (-webkit-touch-callout: none) {
+  .h-full {
+    height: -webkit-fill-available;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    -ms-overflow-style: none;
+    display: none;
+  }
+}
