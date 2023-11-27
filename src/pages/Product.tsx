@@ -56,33 +56,6 @@ const PageProduct = () => {
         </div>
       </div>
     </div>
-    // <div className={""}>
-    //   <div className={""}>
-    //     <h1 className={""}>{selectedProduct.name}</h1>
-    //   </div>
-    //   <div className={""}>
-    //     <div className={""}>
-    //       <h2 className={""}>Price</h2>
-    //       <p className={""}>
-    //         {selectedProduct.price}{" "}
-    //         <span className={""}>{selectedProduct.currency}</span>
-    //       </p>
-    //     </div>
-    //     <div className={""}>
-    //       <h2 className={""}>Category</h2>
-    //       <p className={""}>{selectedProduct.category}</p>
-    //     </div>
-    //     <div className={""}>
-    //       <h2 className={""}>Description:</h2>
-    //       <p className={""}>{selectedProduct.description}</p>
-    //     </div>
-    //   </div>
-    //   <div className={""}>
-    //     <Link to={"/"} className={""}>
-    //       Back to list
-    //     </Link>
-    //   </div>
-    // </div>
   );
 };
 
