@@ -4,8 +4,7 @@ import { SearchInput } from "../components/SearchInput";
 import { State } from "../components/State";
 import { Product } from "../types";
 
-const MOCK_DATA_URL =
-  "https://run.mocky.io/v3/b54fe93f-f5a1-426b-a76c-e43d246901fd";
+const MOCK_DATA_URL = ""; // url
 
 const Home: React.FC = () => {
   const [allProducts, setAllProducts] = useState<Product[]>([]);
